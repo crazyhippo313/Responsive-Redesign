@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: #f5f5d0;
+  color: #0d1b4a;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #0d1b4a;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.content {
+  background-color: #fafaf2;
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+p {
+  font-size: 20px;
+}
+
+#centered {
+display: block;
+margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    min-height: 200px;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h2>Responsive Redesign</h2>
+    <h4>Arizmendi Bakery</h4>
+</div>
+
+<div id="navbar">
+    <a href="https://www.arizmendibakery.com/" target="_blank">Actual Website</a>
+    <a href="#c0">About the website</a>
+    <a href="#c1">Problem Identification</a>
+    <a href="#c2">Lo-fi design</a>
+    <a href="#c3">Visual Guideline</a>
+    <a href="#c4">Hi-fi design</a>
+    <a href="redesigned.html" target="_blank">Redesigned Website</a>
+</div>
+
+<div class="content">
+    <h3 id="c0">About the website</h3>
+    <p>Arizmendi Bakery is a bakery/restaurant based in San Francisco, CA. I am redesigning the homepage of their website</p>
+
+    <h3 id="c1">Problem identification</h3>
+    <h4>1. Unresponsive size of the website</h4>
+    <p>The size of the webpage is fixed, and not designed for computer screen size. This significantly makes the design looks poorly designed, and affect the aesthetics direct</p>
+    <h4>2. Static design of the website</h4>
+    <p>The webpage consists of multiple links. However, it is incredibly difficult to distinguish the link from other static text. This is because these links, and also the page in general, is mostly static. With the dynamics of links and other components, the websites will be easier to use, and also more aesthetically pleasing.
+    </p>
+    <h4>3. Irrelevant information on the home page</h4>
+    <p>The homepage of the website should be the frontline to advertise and attract customers to the business. However, the homepage of this website only has news of the restaurant, and information of Covid, which feels out of place. This type of information should be replaced with the information that conveys the uniqueness/ selling point of the restaurant instead
+    </p>
+
+    <h4>4. No emphasis on important messages</h4>
+    <p>Since this is a homepage of the restaurant. They should emphasize the messages that are important to the customers, such as opening time, menu, and how to order. However, the customers will have a tough time navigating through this website since every information looks like they have the same level of importance. By emphasizing size, color, or positioning of the components, the webpage can be more user-friendly and more aesthetically pleasing.
+    </p>
+
+    <h4>5. Inconsistency of the information</h4>
+    <p>Some information looks like they convey the same thing, but they don’t. For example, they advertise pizza of the day and foods of the day in a very far away place. This information could go in the same place, or words more carefully.
+    </p>
+    <h4>6. More  minimalistic design</h4>
+    <p>It looks like the developer includes every information into this homepage when it is unnecessary. Therefore, the page looks too packed. Some information, and pictures look out of place. By reducing the information, the aesthetic will be better.
+    </p>
+
+    <h3 >Accessibility Test</h3>
+    <p>The results are mostly low contrast between text and background, and small text. This made the website less outstanding, user-friendly, and recognizable. Other points are redundant links, and redundant texts</p>
+    
+    <h3 id="c2">Low-Fidelity Design</h3>
+    <img id="centered" src="lofi.png">
+    <h3 id="c1">Problem Solution</h3>
+    <h4>1. Unresponsive size of the website</h4>
+    <p>The sizes of the webpage/ components inside are dynamic according to screen size</p>
+    <h4>2. Static design of the website</h4>
+    <p>The webpage is now more dynamic there should be change at the navbar and buttons when hovering   </p>
+    <h4>3. Irrelevant information on the home page</h4>
+    <p>Only included important information now    </p>
+    <h4>4. No emphasis on important messages</h4>
+    <p>Important information is listed in huge navbar and buttons </p>
+
+    <h4>5. Inconsistency of the information</h4>
+    <p>Important information is listed in huge navbar and buttons. Same info is in the same place    </p>
+    <h4>6. More  minimalistic design</h4>
+    <p>Less crowded, more beautiful! </p>
+    <h3 id="c3">Visual Guideline</h3>
+    <img id="centered" src="visual-guide.png">
+    <h3 id="c4">High-Fidelity Design</h3>
+    <p> To access Figma, please use this <a href="https://www.figma.com/file/OcYd7yp7U9TVptrrcc8k1d/CSCI1300---project-2?node-id=114%3A90" target="_blank">link</a></p>
+
+   <p>The width and the height of images and components should be based mainly on the screen width and height. The navigation bar is fully dynamic. The link should change the color when hovering, and the bar should change its design when screen width is compressed. Lastly, the button to see the daily special is sticky so that the user can see it even after scrolling.</p>
+
+    <h4>Screen Shot of Figma Files</h4>
+    <img id="centered" src="hifi1.png">
+    <img id="centered" src="hifi2.png">
+    <img id="centered" src="hifi3.png">
+
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>
